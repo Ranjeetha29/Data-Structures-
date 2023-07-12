@@ -1,0 +1,27 @@
+       ArrayTraversal : It is the process of accessing the elements of an array exactly once.
+
+
+#include<stdio.h>
+#define MAX 10
+int main()
+{
+    int arr[MAX],size;                     //Array of type int capable of storing 10[MAX] values
+    printf("Enter the size : ");
+    scanf("%d",&size);       
+    if(size>MAX)
+      printf("Array Overflow");           //No auto bound checking of array in C   
+    else
+    {
+       // Getting elements from user
+       printf("Enter the elements :");
+       for(int i=0;i<size;i++)            //start a loop from 0 to size-1
+           scanf("%d",&arr[i]);
+       
+       //Traversing the elements
+       printf("The elements are:");
+       for(int i=0;i<size;i++)
+           printf("%d",arr[i]);
+       
+    }
+    return 0;
+}
